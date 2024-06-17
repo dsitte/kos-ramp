@@ -72,18 +72,18 @@ function utilFaceBurn {
 
 	function InitOSS {
 		// Initialize persistent data.
-		local lex is lexicon().
-		lex:add("t0", time:seconds).
-		lex:add("pitch_angle", 0).
-		lex:add("pitch_sum", 0).
-		lex:add("yaw_angle", 0).
-		lex:add("yaw_sum", 0).
-		lex:add("Average_samples", 0).
-		lex:add("Average_Interval", 1).
-		lex:add("Average_Interval_Max", 5).
-		lex:add("Ship_Name", ship:name:tostring).
-		lex:add("HasSensors", HasSensors()).
-		return lex.
+		local _lex is lexicon().
+		_lex:add("t0", time:seconds).
+		_lex:add("pitch_angle", 0).
+		_lex:add("pitch_sum", 0).
+		_lex:add("yaw_angle", 0).
+		_lex:add("yaw_sum", 0).
+		_lex:add("Average_samples", 0).
+		_lex:add("Average_Interval", 1).
+		_lex:add("Average_Interval_Max", 5).
+		_lex:add("Ship_Name", ship:name:tostring).
+		_lex:add("HasSensors", HasSensors()).
+		return _lex.
 	}
 
 	if exists("oss.json") { // Looks for saved data
